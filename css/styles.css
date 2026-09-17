@@ -479,3 +479,339 @@ body{font-family:'Nunito','Arial Rounded MT Bold',Arial,sans-serif;background:li
 .bonus-banner-title{font-weight:900;font-size:22px;color:white;margin-bottom:4px;}
 .bonus-banner-sub{font-size:14px;font-weight:700;color:rgba(255,255,255,.85);}
 @keyframes slideUp{from{transform:translateY(30px);opacity:0}to{transform:translateY(0);opacity:1}}
+
+
+/* Responsive layout improvements */
+html, body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+img, svg, canvas, video {
+  max-width: 100%;
+}
+
+#nav {
+  width: 100%;
+  min-width: 0;
+  padding-left: clamp(10px, 3vw, 20px);
+  padding-right: clamp(10px, 3vw, 20px);
+}
+
+#nav-logo {
+  min-width: 0;
+  flex-shrink: 1;
+}
+
+#app {
+  width: 100%;
+  max-width: 920px;
+  min-width: 0;
+  padding-left: clamp(10px, 3vw, 14px);
+  padding-right: clamp(10px, 3vw, 14px);
+}
+
+.strand-grid,
+.how-grid,
+.tt-grid,
+.tt-result-grid {
+  min-width: 0;
+}
+
+.strand-card,
+.topic-row,
+.q-card,
+#workspace,
+.tt-selector-wrap,
+.tt-setting-box,
+.tt-question-card,
+.stepper-row {
+  min-width: 0;
+  max-width: 100%;
+}
+
+.q-text,
+.topic-row-title,
+.topic-row-code,
+.result-value,
+.stepper-label {
+  overflow-wrap: anywhere;
+  word-break: normal;
+}
+
+#drawing-canvas,
+#snake-canvas {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 760px) {
+  #nav {
+    height: auto;
+    min-height: 56px;
+    flex-wrap: wrap;
+    gap: 7px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+
+  #nav-logo {
+    font-size: 16px;
+    max-width: calc(100% - 135px);
+  }
+
+  .nav-spacer {
+    display: none;
+  }
+
+  #nav > button[onclick="showTimesTablesHub()"] {
+    margin-left: auto;
+    padding: 7px 10px !important;
+    font-size: 12px !important;
+  }
+
+  #year-select-wrap {
+    order: 10;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .nav-crumb,
+  .nav-crumb-label {
+    display: none !important;
+  }
+
+  #hero {
+    padding: 30px 10px 24px;
+  }
+
+  #hero .hero-icon {
+    font-size: 48px;
+  }
+
+  .strand-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .strand-card {
+    padding: 18px 15px;
+  }
+
+  .topic-row {
+    gap: 12px;
+  }
+
+  .topic-row > div {
+    min-width: 0;
+  }
+
+  .score-strip {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .score-box {
+    min-width: 0;
+  }
+
+  .q-card,
+  .result-inner,
+  .working-box {
+    padding: 20px 16px;
+  }
+
+  #workspace-header {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .ws-tab {
+    justify-content: center;
+    padding: 11px 6px;
+    font-size: 12px;
+    white-space: normal;
+    text-align: center;
+  }
+
+  #ws-toolbar {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    scrollbar-width: thin;
+  }
+
+  .tool-btn,
+  .swatch,
+  .size-dot {
+    flex-shrink: 0;
+  }
+
+  .tt-grid {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+
+  .tt-settings {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .tt-setting-box {
+    min-width: 0;
+    padding: 13px 10px;
+  }
+
+  .parent-btn {
+    padding: 17px;
+  }
+
+  .modal-card {
+    max-height: calc(100vh - 30px);
+    overflow-y: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  #nav-logo {
+    font-size: 15px;
+    max-width: calc(100% - 120px);
+  }
+
+  #nav > button[onclick="showTimesTablesHub()"] {
+    font-size: 0 !important;
+  }
+
+  #nav > button[onclick="showTimesTablesHub()"]::after {
+    content: "Times Tables";
+    font-size: 11px;
+  }
+
+  .strand-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .how-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .topic-row {
+    align-items: flex-start;
+    padding: 15px;
+  }
+
+  .topic-start-btn {
+    padding: 5px 9px;
+    font-size: 12px;
+  }
+
+  .score-strip {
+    gap: 6px;
+  }
+
+  .score-box {
+    padding: 9px 5px;
+  }
+
+  .score-val {
+    font-size: 18px;
+  }
+
+  .score-lbl {
+    font-size: 9px;
+  }
+
+  .q-card {
+    padding: 18px 14px;
+  }
+
+  #type-panel,
+  #scratch-panel {
+    padding: 12px;
+  }
+
+  #type-answer {
+    padding: 13px;
+    font-size: 18px;
+  }
+
+  #answer-input-label {
+    align-items: flex-start;
+    gap: 8px;
+    font-size: 10px;
+  }
+
+  .sym-btn {
+    padding: 7px 9px;
+  }
+
+  .btn-row {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .tt-selector-wrap {
+    padding: 18px 14px;
+  }
+
+  .tt-grid {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 6px;
+  }
+
+  .tt-cell {
+    border-radius: 10px;
+    font-size: 16px;
+  }
+
+  .tt-settings {
+    grid-template-columns: 1fr;
+  }
+
+  .tt-setting-box {
+    text-align: center;
+  }
+
+  .tt-question-card {
+    padding: 25px 14px;
+  }
+
+  .tt-result-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 6px;
+  }
+
+  .tt-result-stat {
+    padding: 11px 5px;
+  }
+
+  .tt-result-stat-val {
+    font-size: 19px;
+  }
+
+  .stepper-row {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .stepper-controls {
+    width: 100%;
+    justify-content: flex-end;
+  }
+
+  .parent-btn-icon {
+    font-size: 29px;
+  }
+
+  .parent-btn-title {
+    font-size: 16px;
+  }
+
+  .parent-btn-sub {
+    font-size: 12px;
+  }
+}
