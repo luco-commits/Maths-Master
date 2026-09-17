@@ -508,7 +508,7 @@ function showDashboard(){
   render(`
     <div id="hero">
       <span class="hero-icon">🎓</span>
-      <h1>MathsMaster ${CURRENT_YEAR}</h1>
+      <h1>Maths Master Jnr ${CURRENT_YEAR}</h1>
       <p class="sub">Queensland Curriculum · Australian Curriculum v9.0</p>
       <p class="sub2">Every question uses fresh random numbers — unlimited practice!</p>
     </div>
@@ -2010,8 +2010,8 @@ function changeYearLevel(year){
   try{localStorage.setItem('mmSelectedYear',year);}catch(e){}
   ACTIVE_CURRICULUM=YEAR_CURRICULA[year]||CURRICULUM;
   var logo=document.getElementById('nav-logo');
-  if(logo)logo.innerHTML='🎓 MathsMaster '+year;
-  document.title='MathsMaster '+year+' — Queensland Curriculum';
+  if(logo)logo.innerHTML='🎓 Maths Master Jnr '+year;
+  document.title='Maths Master Jnr '+year+' — Queensland Curriculum';
   var sel=document.getElementById('year-level-select');
   if(sel&&sel.value!==year)sel.value=year;
   if(VIEW==='dashboard'||VIEW==='strand'||VIEW==='tt-hub')showDashboard();
@@ -2029,8 +2029,8 @@ function changeYearLevel(year){
       var sel=document.getElementById('year-level-select');
       if(sel)sel.value=saved;
       var logo=document.getElementById('nav-logo');
-      if(logo)logo.innerHTML='🎓 MathsMaster '+saved;
-      document.title='MathsMaster '+saved+' — Queensland Curriculum';
+      if(logo)logo.innerHTML='🎓 Maths Master Jnr '+saved;
+      document.title='Maths Master Jnr '+saved+' — Queensland Curriculum';
     }
   }catch(e){}
 })();

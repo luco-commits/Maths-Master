@@ -1,4 +1,4 @@
-# MathsMaster
+# Maths Master Jnr
 
 A static, installable maths practice app for GitHub Pages. No server or build process is required.
 

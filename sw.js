@@ -1,4 +1,4 @@
-const CACHE_NAME = 'mathsmaster-v3';
+const CACHE_NAME = 'maths-master-jnr-v1';
 const APP_ASSETS = ['./','./index.html','./css/styles.css','./js/app.js','./manifest.json','./assets/icon-192.png','./assets/icon-512.png','./assets/apple-touch-icon.png'];
 self.addEventListener('install', event => event.waitUntil(caches.open(CACHE_NAME).then(cache => cache.addAll(APP_ASSETS)).then(() => self.skipWaiting())));
 self.addEventListener('activate', event => event.waitUntil(caches.keys().then(keys => Promise.all(keys.filter(key => key !== CACHE_NAME).map(key => caches.delete(key)))).then(() => self.clients.claim())));
